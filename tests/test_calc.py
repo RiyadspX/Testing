@@ -2,8 +2,16 @@
 or by name in main and then just by python test_calc.py
 tests dont run in ordr of script
 """
+# This part is because i'm having an error : ModuleNotFoundError: No module named 'src.calc'
+#import sys
+#import os
+#sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from calc import Calculator
+# Solution 2 is to run the command python -m tests.test_calc
+
+
+
+from src.calc import Calculator
 import unittest
 
 class TestCalculator(unittest.TestCase):
@@ -55,6 +63,8 @@ class TestCalculator(unittest.TestCase):
 
         
 if __name__ == '__main__':
+    
     unittest.main()
+    
 
         
